@@ -1,0 +1,423 @@
+TProjet
+v6
+r1
+cCheck dependencies
+cCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/Projet normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005320146300000000000000AA
+t1394611299
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052679ED2000000000000044C
+t1382522578
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000005320145300000000000001DE
+t1394611283
+s478
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+c0000000053201454000000000000681C
+t1394611284
+s26652
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+c0000000052679ED70000000000004734
+t1382522583
+s18228
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+c0000000052679ED7000000000000FC6C
+t1382522583
+s64620
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+c0000000052679ED7000000000000F6A0
+t1382522583
+s63136
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+c0000000052679ED70000000000006254
+t1382522583
+s25172
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+c0000000052679ED7000000000000E0F8
+t1382522583
+s57592
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+c0000000053201454000000000000D6DC
+t1394611284
+s55004
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+c00000000532014540000000000006308
+t1394611284
+s25352
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+c0000000052679ED70000000000004050
+t1382522583
+s16464
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+c00000000532014540000000000008570
+t1394611284
+s34160
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+c0000000052679ED70000000000005EA0
+t1382522583
+s24224
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+c0000000052679ED70000000000005FAC
+t1382522583
+s24492
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+c0000000052679ED70000000000004440
+t1382522583
+s17472
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+c0000000052679ED7000000000000AA28
+t1382522583
+s43560
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+c0000000052679ED70000000000003E2C
+t1382522583
+s15916
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+c00000000532014540000000000030B04
+t1394611284
+s199428
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+c00000000532014540000000000005E54
+t1394611284
+s24148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+c00000000532014540000000000006A90
+t1394611284
+s27280
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+c0000000052679ED700000000000178AC
+t1382522583
+s96428
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+c0000000053201454000000000001ADC8
+t1394611284
+s110024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+c0000000052679ED7000000000001028C
+t1382522583
+s66188
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+c00000000532014540000000000008800
+t1394611284
+s34816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+c0000000052679ED70000000000011090
+t1382522583
+s69776
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+c0000000052679ED7000000000000882C
+t1382522583
+s34860
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+c000000005320145400000000000067AC
+t1394611284
+s26540
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+c0000000052679ED70000000000008DEC
+t1382522583
+s36332
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+c00000000532014540000000000004C08
+t1394611284
+s19464
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+c00000000532014540000000000002428
+t1394611284
+s9256
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+c0000000052679ED7000000000000439C
+t1382522583
+s17308
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+c0000000052679ED70000000000006768
+t1382522583
+s26472
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+c000000005320145400000000000172F4
+t1394611284
+s94964
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c00000000532014550000000000000ADC
+t1394611285
+s2780
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+c00000000532014550000000000001770
+t1394611285
+s6000
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o
+t1396923099
+s1716
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o
+t1396923266
+s83260
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o
+t1396918909
+s5136
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Projet.LinkFileList
+c000000005343576200000000000002F5
+t1396922210
+s757
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o
+t1396954541
+s3748
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o
+t1396923604
+s7296
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/Projet
+t1396923604
+s61784
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c
+c00000000534354AF000000000000009F
+t1396921519
+s159
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.h
+c00000000534355400000000000000140
+t1396921664
+s320
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c
+c0000000053435B7C0000000000014964
+t1396923260
+s84324
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.h
+c0000000053435AB600000000000001DF
+t1396923062
+s479
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c
+c0000000053434A480000000000000423
+t1396918856
+s1059
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.h
+c000000005342E93F0000000000000255
+t1396894015
+s597
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c
+c000000005343D5AB00000000000002F2
+t1396954539
+s754
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/pion.h
+c000000005342E93F0000000000000255
+t1396894015
+s597
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c
+c0000000053435CD30000000000000E8D
+t1396923603
+s3725
+
+N/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.h
+c000000005342FF9E0000000000000104
+t1396899742
+s260
+
+CBuild AST from /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c
+r0
+
+CBuild AST from /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c
+r0
+
+CBuild AST from /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c
+r0
+
+CBuild AST from /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c
+r0
+
+CBuild AST from /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesbc08772d0df4b841^0c76772d0df4b841^---0#1#1#--18"Check dependencies36"BB1512DE-5A21-41F2-BE3F-54B5D1053434-
+
+CCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418615899.759248
+e418615899.798313
+r1
+xCompileC
+xDerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o
+x/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.h
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/pion.h
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c182"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o Projet/Coup.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler1970c25b92f3b841^815ecc5b92f3b841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c0000000000000000^3132"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o Projet/Coup.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Coup.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o36"19149727-B5FA-4116-8B55-81DC71A56450-
+bACAF57B6-F650-4250-B41C-3E3E90752FB1
+
+CCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418616066.583029
+e418616066.678142
+r1
+xCompileC
+xDerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o
+x/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.h
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/pion.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c186"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o Projet/Grille.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler8e5a950293f3b841^bf9cad0293f3b841^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c0000000000000000^3144"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o Projet/Grille.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o36"91BC9E97-2505-40C1-82C1-683624C2102F-
+bCC0A56CA-54AE-4405-A254-551B53DC6A2C
+
+CCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418611709.012095
+e418611709.068454
+r1
+xCompileC
+xDerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o
+x/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c182"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o Projet/Pion.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler452f03fd81f3b841^2b8811fd81f3b841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c0000000000000000^3132"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o Projet/Pion.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o36"9268283A-5E61-4D35-A75F-C72A462B6162-
+bD3EB8101-E8CB-45B3-A73E-97C9871ECD86
+
+CCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418647341.466559
+e418647341.546188
+r1
+xCompileC
+xDerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o
+x/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Grille.h
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/pion.h
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c182"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o Projet/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler3b8e772d0df4b841^1cd38b2d0df4b841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c0000000000000000^3132"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o Projet/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/main.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o36"D100AC7A-3FF0-4C33-A1FC-321A21D74804-
+b52D314E7-147A-4E81-9B41-B7BBA6F98DEA
+
+CCompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s418616404.781250
+e418616404.819007
+r1
+xCompileC
+xDerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o
+x/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/Pion.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c182"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o Projet/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilere814c85494f3b841^f8aad15494f3b841^---0#0#1#-19%DVTDocumentLocation2@71"file:///Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c0000000000000000^3132"CompileC DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o Projet/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Projet-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/Projet/test.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o36"29630954-1B8E-451F-B79C-D99FA4E2E7CB-
+bE762E234-1718-4D31-A92D-5C3CEAB3C729
+
+CLd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/Projet normal x86_64
+s418647341.547424
+e418647341.572151
+r1
+xLd
+x/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/Projet
+xnormal
+xx86_64
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Projet.LinkFileList
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Coup.o
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/main.o
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Grille.o
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Pion.o
+d/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/test.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Link /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/Projet63"Ld DerivedData/Projet/Build/Products/Debug/Projet normal x86_6448318c2d0df4b841^f278922d0df4b841^---0#0#1#--1075"Ld DerivedData/Projet/Build/Products/Debug/Projet normal x86_64    cd /Users/Toussaint/Documents/Cours/LC4/Projet/Projet    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -F/Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug -filelist /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Projet.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Intermediates/Projet.build/Debug/Projet.build/Objects-normal/x86_64/Projet_dependency_info.dat -o /Users/Toussaint/Documents/Cours/LC4/Projet/Projet/DerivedData/Projet/Build/Products/Debug/Projet36"3922847D-92FB-42F5-A0B5-A4A955B78E36-
+b52D314E7-147A-4E81-9B41-B7BBA6F98DEA
+
