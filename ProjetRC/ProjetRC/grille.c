@@ -30,7 +30,7 @@ pion ** initGrille(){
             else *(*(grille+x)+y) = initPion(x,y);
         }
     }
-    
+
     return grille;
 }
 
@@ -164,9 +164,9 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
                 coupActuelle = coupSuivant;
             }
             break;
-            
+
     }
-    
+
     return coupActuelle;
 }
 
@@ -199,7 +199,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x > 2){
                 if(grillePion(grille,x-1,y).joueur == 'V'&&grillePion(grille,x-2,y).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-3,y))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -212,7 +212,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
         case 2:
             if(y < 6 || y>1) {
                 if(grillePion(grille,x,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
@@ -289,10 +289,10 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             break;
     }
-    
+
     switch (signePion*(pionDepart.typeInterne%1000)/100) {
         case 3:
-            
+
             if(x < 5 && (y < 5 || y > 2)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x+2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+3,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -305,7 +305,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 6 && (y < 4|| y > 3)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -318,7 +318,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 5 && (y < 4|| y > 3)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x+2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -331,8 +331,8 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
-            
+
+
             if((y < 5 || y > 2) && x > 2){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x-2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-3,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -345,7 +345,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if((y < 4|| y > 3) && x == 2){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x-2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -359,7 +359,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                 }
             }
 
-            
+
             if((y < 4|| y > 3) && x == 1){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -387,7 +387,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 6 && (y < 5|| y > 2)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -400,7 +400,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if((y < 6|| y > 1) && x > 1){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-2,y+(2*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -413,7 +413,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if((y < 5|| y > 2) && x == 1){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -426,7 +426,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
         case 1:
             if(x < 7 && (y < 7||y>0)){
                 if(deplacement(pionDepart,grillePion(grille,x+1,y+(1*signePion)))){
@@ -455,7 +455,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             break;
     }
-    
+
     return coupActuelle;
 }
 
@@ -483,7 +483,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     }
                 }
             }
-            
+
             if(x > 0 && (y < 7||y>0) ){
                 if(deployement(pionDepart,grillePion(grille,x-1,y+(1*signePion)))){
                     char * freeA = concat(begin,caract(turn,2));
@@ -523,9 +523,9 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                         free(proto); proto = NULL;
                     }
                 }
-                
+
             }
-            
+
             if(x == 6 && (y < 6|| y > 1) ){
                 if(deployement(pionDepart, grillePion(grille,x+1,y+(1*signePion)))&&deployement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
                     char * freeA = concat(begin,caract(turn,2));
@@ -544,9 +544,9 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                         free(proto); proto = NULL;
                     }
                 }
-                
+
             }
-            
+
             if(x < 1 && (y < 6|| y > 1) ){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart,grillePion(grille,x-2,y+(2*signePion)))){
                     char * freeA = concat(begin,caract(turn,2));
@@ -565,9 +565,9 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                         free(proto); proto = NULL;
                     }
                 }
-                
+
             }
-            
+
             if(x == 1 && (y < 6|| y > 1) ){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
                     char * freeA = concat(begin,caract(turn,2));
@@ -586,7 +586,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                         free(proto); proto = NULL;
                     }
                 }
-                
+
             }
             break;
         case 3:
@@ -603,7 +603,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 5 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x+1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x+2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x+1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -617,7 +617,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 6 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x+1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x-1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -632,7 +632,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                 }
             }
 
-            
+
             if(x > 2 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x-2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x-3,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -646,7 +646,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 2 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x-2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x-1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -660,7 +660,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 1 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x+1,y+(3*signePion)))){
                     coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
@@ -676,10 +676,10 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
             }
             break;
     }
-    
+
     switch (signePion*(newType%100)/10) {
         case 1:
-            
+
             if((y < 7||y>0) ){
                 if(deployement(pionDepart,grillePion(grille,x,y+(1*signePion)))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -699,7 +699,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     }
                 }
             }
-            
+
             if( x < 7 ){
                 if(deployement(pionDepart,grillePion(grille,x+1,y))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -719,7 +719,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     }
                 }
             }
-            
+
             if( x > 0 ){
                 if(deployement(pionDepart,grillePion(grille,x-1,y))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -741,7 +741,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
             }
             break;
         case 2:
-            
+
             if((y < 6||y>1) ){
                 if(deployement(pionDepart,grillePion(grille,x,y+(1*signePion)))&&deployement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -781,7 +781,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     }
                 }
             }
-            
+
             if(x>1 ){
                 if(deployement(pionDepart,grillePion(grille,x-1,y))&&deployement(pionDepart,grillePion(grille,x-2,y))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -801,10 +801,10 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     }
                 }
             }
-            
+
             break;
         case 3:
-            
+
             if((y < 5||y>2) ){
                 if(deployement(pionDepart,grillePion(grille,x,y+(1*signePion)))&&deployement(pionDepart,grillePion(grille,x,y+(2*signePion)))&&deployement(pionDepart,grillePion(grille,x,y+(3*signePion)))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -831,7 +831,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 5){
                 if(deployement(pionDepart,grillePion(grille,x+1,y))&&deployement2(pionDepart,grillePion(grille,x+2,y))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -845,7 +845,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if((x > 2) ){
                 if(deployement(pionDepart,grillePion(grille,x-1,y))&&deployement(pionDepart,grillePion(grille,x-2,y))&&deployement(pionDepart,grillePion(grille,x-3,y))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -859,7 +859,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             if(x == 2){
                 if(deployement(pionDepart,grillePion(grille,x-1,y))&&deployement2(pionDepart,grillePion(grille,x-2,y))){
                     char * freeA = concat(begin,caract(turn,1));
@@ -873,7 +873,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     coupActuelle = coupSuivant;
                 }
             }
-            
+
             break;
     }
     return coupActuelle;
@@ -1024,4 +1024,3 @@ int action(pion ** grille,char * proto,coup* coupPere){
     }
     return 0;
 }
-
