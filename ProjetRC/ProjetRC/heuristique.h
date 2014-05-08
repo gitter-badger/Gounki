@@ -10,7 +10,10 @@
 #define ProjetRC_heuristique_h
 #include "grille.h"
 #include "pion.h"
+#include "partieHeuristique.h"
 
-int heuristiques (pion** grille,coup* coup,char joueur);
+//int heuristiques (pion** grille,coup* coup,char joueur);
+int calculHeuristiqueCoups(coup * pere, pion ** grille, char joueur);
+int calculHeuristiqueCoupsMultiples(coup * pere, pion ** grille, char joueur,int profondeur);
 
 #endif

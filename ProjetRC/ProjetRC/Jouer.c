@@ -28,6 +28,9 @@ void interaction(char * coup , pion ** grille , char joueur , int mode){
     else if(!strcmp(coup, "exit")){
         exit(1);
     }
+    else if(!strcmp(coup, "help")){
+        printf("Pour faire un déplacment : c2-d3\nPour faire un déploiement simple : c2+b2 pour les carrés\nPour faire un déploiement simple : c2*b3 pour les rond\nPour les deploiement composées c2*b3-b4 pour ce commencé par rond\nPour les deploiement composées c2+c3-b4 pour ce commencé par rond\n");
+    }
 }
 
 void viderBuffer()
@@ -51,7 +54,7 @@ void jouer(){
     
     int mode=0;
     printf("Bienvenue A Gounki\n");
-    printf("Pour initier une nouvelle partie taper1 1\nPour charger une partie taper 2 \n");
+    printf("Pour initier une nouvelle partie taper 1\nPour charger une partie taper 2 \n");
     while (mode==0) {
         scanf("%d", &mode);
         viderBuffer();
@@ -102,6 +105,12 @@ void jouer(){
         }
     }
     else if (mode==2) {
+        int difficulter = -1;
+        printf("Taper un nombre de 0 à 4 pour la difficulter \n");
+        while (difficulter<0||difficulter>4) {
+            scanf("%d", &difficulter);
+            viderBuffer();
+        }
         //Appelle fonction joueurs contre IA
             while (!victoire) {
                 //while (fonction victoir.)
@@ -126,9 +135,11 @@ void jouer(){
                 updateMap(grille);
                 affiche();
                 
+                    if(!victoire){
                 printf("Coup IA\n");//appelle IA.
-                jouerCoupIA(grille, 'B');
+                jouerCoupIA(grille, 'B',difficulter,0);
                     joueur = 'A';
+                    }
                 }
             }
         

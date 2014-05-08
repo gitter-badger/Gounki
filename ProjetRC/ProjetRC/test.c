@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Pion.h"
-#define clear()     printf("\033[H\033[2J")
+#define clear() printf("\033[2J\033[1;1H")
 #define fond1()     printf("\033[40m"); //fond noir
 #define fond2()     printf("\033[47m"); //fond grise.
 #define BLUE        "\033[1;34m"
@@ -71,6 +71,7 @@ void affiche(){
             printf("%c",map[i][j]);
         }
         c++;
+        printf ("\033[0m");
         printf("\n");
     }
     printf ("\033[0m");

@@ -16,7 +16,17 @@
 int heuristique_ok = 1;
 
 
-
+pion ** copieGrille(pion ** grille){
+    pion** grilleCpy = malloc(sizeof(pion *)*8);
+    int x = 0,y=0;
+    for (x=0; x<8; x++) {
+        *(grilleCpy+x) = malloc(sizeof(pion)*8);
+        for (y=0; y<8; y++) {
+            *(*(grilleCpy+x)+y) = grille[x][y];
+        }
+    }
+    return grilleCpy;
+}
 
 pion ** initGrille(){
     pion** grille = malloc(sizeof(pion *)*8);
@@ -128,7 +138,7 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
         case 3:
             if (((y == 5&&p.typeInterne>0) || (y == 2&&p.typeInterne<0))&& deployement(p, grillePion(grille,x,y+1*j))&&deployement(p, grillePion(grille,x,y+2*j)))
             {
-                coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                 coupActuelle->proto=(concat(begin,"#"));
                 coupActuelle->coupSuivant = coupSuivant;
                 coupActuelle = coupSuivant;
@@ -136,7 +146,7 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
         case 2:
             if (((y == 6&&p.typeInterne>0) || (y == 1&&p.typeInterne<0))&& deployement(p, grillePion(grille,x,y+1*j)))
             {
-                coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                 coupActuelle->proto=(concat(begin,"#"));
                 coupActuelle->coupSuivant = coupSuivant;
                 coupActuelle = coupSuivant;
@@ -144,7 +154,7 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
         case 1:
             if((y==0&&p.typeInterne<0) || (y==7&&p.typeInterne>0))
             {
-                coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                 coupActuelle->proto=(concat(begin,"#"));
                 coupActuelle->coupSuivant = coupSuivant;
                 coupActuelle = coupSuivant;
@@ -154,7 +164,7 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
     switch (j*(p.typeInterne%1000)/100){
         case 3:
             if (((y == 5&&p.typeInterne>0) || (y == 2&&p.typeInterne<0))&& ((deployement(p, grillePion(grille,x+1,y+1*j))&&deployement(p, grillePion(grille,x+2,y+2*j))) || (deployement(p, grillePion(grille,x-1,y+1*j))&&deployement(p, grillePion(grille,x-2,y+2*j))))){
-                coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                 coupActuelle->proto=(concat(begin,"#"));
                 coupActuelle->coupSuivant = coupSuivant;
                 coupActuelle = coupSuivant;
@@ -162,7 +172,7 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
         case 2:
             if (((y == 6&&p.typeInterne>0) || (y == 1&&p.typeInterne<0))&& (deployement(p, grillePion(grille,x+1,y+1*j))|| deployement(p, grillePion(grille,x-1,y+1*j))))
             {
-                coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                 coupActuelle->proto=(concat(begin,"#"));
                 coupActuelle->coupSuivant = coupSuivant;
                 coupActuelle = coupSuivant;
@@ -171,7 +181,7 @@ coup * victoirePossibles(pion p, pion** grille,coup* coupActuelle,char *begin){
         case 1:
             if ((y==0&&p.typeInterne<0) || (y==7&&p.typeInterne>0))
             {
-                coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                 coupActuelle->proto=(concat(begin,"#"));
                 coupActuelle->coupSuivant = coupSuivant;
                 coupActuelle = coupSuivant;
@@ -190,7 +200,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
         case 3:
             if(y < 5|| y>2) {
                 if(grillePion(grille,x,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -202,7 +212,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             if(x < 5){
                 if(grillePion(grille,x+1,y).joueur == 'V'&&grillePion(grille,x+2,y).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+3,y))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+3,y);
                     coupActuelle->proto=concat(freeA,freeB);
@@ -215,7 +225,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if(x > 2){
                 if(grillePion(grille,x-1,y).joueur == 'V'&&grillePion(grille,x-2,y).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-3,y))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-3,y);
                     coupActuelle->proto=concat(freeA,freeB);
@@ -229,7 +239,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
         case 2:
             if(y < 6 || y>1) {
                 if(grillePion(grille,x,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x,y+(2*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -241,7 +251,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             if(x < 6){
                 if(grillePion(grille,x+1,y).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+2,y))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+2,y);
                     coupActuelle->proto=concat(freeA,freeB);
@@ -253,7 +263,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             if(x > 1){
                 if(grillePion(grille,x-1,y).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-2,y))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-2,y);
                     coupActuelle->proto=concat(freeA,freeB);
@@ -266,7 +276,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
         case 1:
             if(y < 7 || y>0) {
                 if(deplacement(pionDepart,grillePion(grille,x,y+(1*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x,y+(1*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -278,7 +288,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             if(x < 7){
                 if(deplacement(pionDepart,grillePion(grille,x+1,y))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+1,y);
                     coupActuelle->proto=concat(freeA,freeB);
@@ -290,7 +300,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             if(x > 0){
                 if(deplacement(pionDepart,grillePion(grille,x-1,y))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-1,y);
                     coupActuelle->proto=concat(freeA,freeB);
@@ -308,7 +318,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if(x < 5 && (y < 5 || y > 2)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x+2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+3,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+3,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -321,7 +331,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if(x == 6 && (y < 4|| y > 3)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-1,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -334,7 +344,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if(x == 5 && (y < 4|| y > 3)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x+2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+1,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -348,7 +358,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if((y < 5 || y > 2) && x > 2){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x-2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-3,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-3,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -361,7 +371,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if((y < 4|| y > 3) && x == 2){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x-2,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-1,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -375,7 +385,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if((y < 4|| y > 3) && x == 1){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&grillePion(grille,x,y+(2*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+1,y+(3*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -390,7 +400,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
         case 2:
             if(x < 6 && (y < 6|| y > 1)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x+2,y+(2*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+2,y+(2*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -403,7 +413,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if(x == 6 && (y < 5|| y > 2)){
                 if(grillePion(grille,x+1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x,y+(2*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -416,7 +426,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if((y < 6|| y > 1) && x > 1){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x-2,y+(2*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-2,y+(2*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -429,7 +439,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
 
             if((y < 5|| y > 2) && x == 1){
                 if(grillePion(grille,x-1,y+(1*signePion)).joueur == 'V'&&deplacement(pionDepart,grillePion(grille,x,y+(2*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x,y+(2*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -443,7 +453,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
         case 1:
             if(x < 7 && (y < 7||y>0)){
                 if(deplacement(pionDepart,grillePion(grille,x+1,y+(1*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x+1,y+(1*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -455,7 +465,7 @@ coup * deplacementPossibles(pion pionDepart,pion** grille,coup*coupActuelle,char
             }
             if((y < 7||y>0) && x > 0 ){
                 if(deplacement(pionDepart,grillePion(grille,x-1,y+(1*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,"-");
                     char * freeB = convertit(x-1,y+(1*signePion));
                     coupActuelle->proto=concat(freeA,freeB);
@@ -485,7 +495,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%100)/10==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -505,7 +515,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%100)/10==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -526,7 +536,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if ((newType%100)/10==0) {
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -547,7 +557,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if ((newType%100)/10==0) {
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -568,7 +578,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if ((newType%100)/10==0) {
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -589,7 +599,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if ((newType%100)/10==0) {
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -605,7 +615,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
         case 3:
             if(x < 5 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x+1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x+2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x+3,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,caract(turn,2));
                     char * freeB =convertit(x+3,y+(3*signePion));
                     char * proto = concat(freeA, freeB);
@@ -619,7 +629,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
 
             if(x == 5 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x+1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x+2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x+1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,caract(turn,2));
                     char * freeB =convertit(x+1,y+(3*signePion));
                     char * proto = concat(freeA, freeB);
@@ -633,7 +643,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
 
             if(x == 6 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x+1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x-1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,caract(turn,2));
                     char * freeB =convertit(x-1,y+(3*signePion));
                     char * proto = concat(freeA, freeB);
@@ -648,7 +658,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
 
             if(x > 2 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x-2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x-3,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,caract(turn,2));
                     char * freeB = convertit(x-3,y+(3*signePion));
                     char * proto = concat(freeA, freeB);
@@ -662,7 +672,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
 
             if(x == 2 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x-2,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x-1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,caract(turn,2));
                     char * freeB = convertit(x-1,y+(3*signePion));
                     char * proto = concat(freeA, freeB);
@@ -676,7 +686,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
 
             if(x == 1 && (y < 5||y>2)){
                 if(deployement(pionDepart, grillePion(grille,x-1,y+(1*signePion)))&&deployement(pionDepart, grillePion(grille,x,y+(2*signePion)))&&deployement(pionDepart, grillePion(grille,x+1,y+(3*signePion)))){
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     char * freeA = concat(begin,caract(turn,2));
                     char * freeB = convertit(x+1,y+(3*signePion));
                     char * proto = concat(freeA, freeB);
@@ -701,7 +711,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%1000)/100==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -721,7 +731,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%1000)/100==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -741,7 +751,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%1000)/100==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -763,7 +773,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%1000)/100==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -783,7 +793,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%1000)/100==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -803,7 +813,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
                     if((newType%1000)/100==0){
-                        coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                        coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                         coupActuelle->proto=proto;
                         coupActuelle->coupSuivant = coupSuivant;
                         coupActuelle = coupSuivant;
@@ -825,7 +835,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     char * proto = concat(freeA, freeB);
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     coupActuelle->proto=proto;
                     coupActuelle->coupSuivant = coupSuivant;
                     coupActuelle = coupSuivant;
@@ -838,7 +848,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     char * proto = concat(freeA, freeB);
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     coupActuelle->proto=proto;
                     coupActuelle->coupSuivant = coupSuivant;
                     coupActuelle = coupSuivant;
@@ -852,7 +862,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     char * proto = concat(freeA, freeB);
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     coupActuelle->proto=proto;
                     coupActuelle->coupSuivant = coupSuivant;
                     coupActuelle = coupSuivant;
@@ -866,7 +876,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     char * proto = concat(freeA, freeB);
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     coupActuelle->proto=proto;
                     coupActuelle->coupSuivant = coupSuivant;
                     coupActuelle = coupSuivant;
@@ -880,7 +890,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
                     char * proto = concat(freeA, freeB);
                     free(freeA); freeA = NULL;
                     free(freeB); freeB = NULL;
-                    coup * coupSuivant = malloc(sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
+                    coup * coupSuivant = calloc(1,sizeof(coup)); coupSuivant->proto = NULL;coupSuivant->coupSuivant= NULL;
                     coupActuelle->proto=proto;
                     coupActuelle->coupSuivant = coupSuivant;
                     coupActuelle = coupSuivant;
@@ -893,7 +903,7 @@ coup * deployPossibles(pion pionDepart,pion** grille,int turn,int newType,coup *
 }
 
 coup* coupsPossibles(pion** grille,char joueur,coup * coupPere){
-    //coup* coupPere = malloc(sizeof(coup));
+    //coup* coupPere = calloc(1,sizeof(coup));
     coup* coupActuelle = coupPere;
     int x =0,y=0;
     for (x=0; x<8; x++) {
@@ -1006,7 +1016,7 @@ int action(pion ** grille,char * proto,coup* coupPere){
     while (coupSuivant->coupSuivant != NULL) {
         if(strcmp(coupSuivant->proto, proto)==0){
             if (strlen(proto)==3) {
-                printf("\n Victoire ");
+                //printf("\n Victoire ");
                 setVictoire(1);
                 return 1;
             }

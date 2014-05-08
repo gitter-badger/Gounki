@@ -18,7 +18,7 @@
 #include "heuristique.h"
 
 int partiH();
-void jouerCoupIA(pion ** grille, char joueur);
+int jouerCoupIA(pion ** grille, char joueur,int difficulter,int testIA);
 
 
 
