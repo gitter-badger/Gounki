@@ -11,6 +11,7 @@
 #include "pion.h"
 #include <stdlib.h>
 #include <math.h>
+#include "persistance.h"
 
 
 typedef struct coup {
@@ -24,5 +25,6 @@ void freeGrille(pion ** grille);
 void freeCoup(coup * pere,int i);
 coup* coupsPossibles(pion** grilleActuelle,char joueur,coup * pere);
 int action(pion ** grille,char * proto,coup* coupPere);
+pion ** grilleString(pion ** grille,char * string);
 
 #endif

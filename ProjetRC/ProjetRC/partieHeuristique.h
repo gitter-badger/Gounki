@@ -10,7 +10,7 @@
 #define ProjetRC_partieHeuristique_h
 
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include "Grille.h"
 #include "Pion.h"
 #include "test.h"
@@ -18,6 +18,7 @@
 #include "heuristique.h"
 
 int partiH();
+void jouerCoupIA(pion ** grille, char joueur);
 
 
 

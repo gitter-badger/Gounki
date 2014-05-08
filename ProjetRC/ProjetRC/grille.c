@@ -11,6 +11,7 @@
 #include <string.h>
 #include "grille.h"
 #include "heuristique.h"
+#include "Jouer.h"
 
 int heuristique_ok = 1;
 
@@ -33,6 +34,18 @@ pion ** initGrille(){
 
     return grille;
 }
+
+pion ** grilleString(pion ** grille,char * chargement){
+    int i = 0;
+    for (i=0; i<64; i++) {
+        grille[i/8][i%8].type = charToInt(chargement[2*i+2]);
+        grille[i/8][i%8].joueur =chargement[2*i+3];
+        calculTypeInterne(&grille[i/8][i%8]);
+        calculTypeInterne(&grille[i/8][i%8]);
+    }
+    return grille;
+}
+
 
 void initChar(char * string, int stringLen){
     int i = 0;
@@ -994,6 +1007,7 @@ int action(pion ** grille,char * proto,coup* coupPere){
         if(strcmp(coupSuivant->proto, proto)==0){
             if (strlen(proto)==3) {
                 printf("\n Victoire ");
+                setVictoire(1);
                 return 1;
             }
             else if (strlen(proto)==5&&proto[2]=='-') {
@@ -1022,5 +1036,6 @@ int action(pion ** grille,char * proto,coup* coupPere){
         }
         coupSuivant = coupSuivant->coupSuivant;
     }
-    return 0;
+    return -1;
 }
+
