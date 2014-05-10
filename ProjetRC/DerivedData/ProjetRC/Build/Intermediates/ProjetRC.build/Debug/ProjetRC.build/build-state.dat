@@ -7,8 +7,8 @@ cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC
 cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/grille.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/grille.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/main.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/main.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/heuristique.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/heuristique.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/Jouer.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/Jouer.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/persistance.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/persistance.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC normal x86_64
 
@@ -226,8 +226,8 @@ t1399749607
 s7932
 
 N/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o
-t1399752748
-s7804
+t1399753307
+s7972
 
 N/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/StaticAnalyzer/ProjetRC/ProjetRC/normal/x86_64/Jouer.plist
 t2
@@ -262,7 +262,7 @@ t2
 s0
 
 N/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC
-t1399752748
+t1399753272
 s67628
 
 N/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/Grille.h
@@ -341,9 +341,9 @@ t1399555306
 s646
 
 N/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c
-c00000000536E87190000000000000EEF
-t1399752473
-s3823
+c00000000536E8A590000000000000F32
+t1399753305
+s3890
 
 N/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.h
 c00000000534D44150000000000000114
@@ -594,7 +594,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies7d75cdfdbf1eb941^7bdacdfdbf1eb941^---0#1#1#--18"Check dependencies36"E2B36546-BED3-47E8-8744-351D0E8D98C4-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb8239cdbc11eb941^af7a9cdbc11eb941^---0#1#1#--18"Check dependencies36"B95E62CE-A77D-4FAE-BFF3-55B35A07E38C-
 
 CCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/Jouer.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/Jouer.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s421444474.421054
@@ -749,8 +749,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile
 b6B4FF71F-560B-4E7D-976A-84B75046BEF9
 
 CCompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s421445548.932287
-e421445548.974739
+s421446107.611771
+e421446107.649489
 r1
 xCompileC
 xDerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o
@@ -761,12 +761,12 @@ xc
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c
 d/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/Pion.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c190"CompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler75c7eeacbf1eb941^c288f9acbf1eb941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c0000000000000000^3236"CompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o36"98BCFEB2-5CE6-4962-A4F2-48CD422608E5-
-b0834375B-425A-4EC1-A60F-979131ACDCF8
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c190"CompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compilerd1b09cdbc11eb941^2c45a6dbc11eb941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c0000000000000000^3236"CompileC DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o ProjetRC/test.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-generated-files.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-own-target-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-all-target-headers.hmap -iquote /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/ProjetRC-project-headers.hmap -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/DerivedSources/x86_64 -I/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/DerivedSources -F/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug -MMD -MT dependencies -MF /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.d --serialize-diagnostics /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.dia -c /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/ProjetRC/test.c -o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/test.o36"12BB5A9A-C1BA-4CED-A792-A1361342159A-
+b6115E9F3-F99D-41B5-987B-F07F2C8F8D6F
 
 CLd /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC normal x86_64
-s421445629.917468
-e421445629.938945
+s421446107.651094
+e421446107.675471
 r1
 xLd
 x/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC
@@ -813,6 +813,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Link /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC67"Ld DerivedData/ProjetRC/Build/Products/Debug/ProjetRC normal x86_64faeeeafdbf1eb941^2460f0fdbf1eb941^---0#0#1#--1115"Ld DerivedData/ProjetRC/Build/Products/Debug/ProjetRC normal x86_64    cd /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug -F/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug -filelist /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/ProjetRC.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/ProjetRC_dependency_info.dat -o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC36"B7CBE784-1D94-4D17-B984-93EA7B9E4241-
-b1A6354B3-DB2C-4DBA-87EF-784E46BD8AAA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Link /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC67"Ld DerivedData/ProjetRC/Build/Products/Debug/ProjetRC normal x86_6490bda6dbc11eb941^eaecacdbc11eb941^---0#0#1#--1115"Ld DerivedData/ProjetRC/Build/Products/Debug/ProjetRC normal x86_64    cd /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug -F/Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug -filelist /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/ProjetRC.LinkFileList -mmacosx-version-min=10.9 -Xlinker -dependency_info -Xlinker /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Intermediates/ProjetRC.build/Debug/ProjetRC.build/Objects-normal/x86_64/ProjetRC_dependency_info.dat -o /Users/Toussaint/Documents/Cours/LC4/Projet/ProjetRC/DerivedData/ProjetRC/Build/Products/Debug/ProjetRC36"3BDBE184-67B9-4C99-A937-E5ED19BF8F1F-
+b6115E9F3-F99D-41B5-987B-F07F2C8F8D6F
 

@@ -4,7 +4,8 @@
 #define clear()     printf("\033[H\033[2J")
 #define fond1()     printf("\033[40m"); //fond noir
 #define fond2()     printf("\033[47m"); //fond gris.
-#define BLUE()       printf("\033[1;34m")
+#define BLUE()      printf("\033[1;34m")
+#define RED()       printf("\033[1;31m")
 #define BLACK       "\033[0;30m"
 
 char ** map;
@@ -68,7 +69,8 @@ void affiche(){
             if (i==0 || j==16){
                 printf ("\033[0m");
             }
-            BLUE();
+            if((map[i][j]=='B'&& j != 16)||(map[i][j+1]=='B'&& j != 15)|| (map[i][j-1]=='B'&& j != 17))BLUE();
+            if((map[i][j]=='A'&& j != 16)||(map[i][j+1]=='A'&& j != 15)|| (map[i][j-1]=='A'&& j != 17))RED();
             printf("%c ",map[i][j]);
         }
         c++;
