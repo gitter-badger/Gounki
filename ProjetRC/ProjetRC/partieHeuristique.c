@@ -8,19 +8,40 @@
 
 #include "partieHeuristique.h"
 
+void viderBufferc()
+{
+    int c = 0;
+    while (c != '\n' && c != EOF)
+    {
+        c = getchar();
+    }
+}
 
 
 int partiH()
 {
+    
+    int typeA = -1;
+    int typeB = -1;
+    printf("Choisiser l'IA de A \n0 pour l'IA standa\n1 pour l'IA aggresive\n2 pour l'IA defence\n3 pour l'IA bizzare\n");
+    while (typeA<0||typeA>4) {
+        scanf("%d", &typeA);
+        viderBufferc();
+    }
+    printf("Choisiser l'IA de B \n0 pour l'IA standa\n1 pour l'IA aggresive\n2 pour l'IA defence\n3 pour l'IA bizzare\n");
+    while (typeB<0||typeB>4) {
+        scanf("%d", &typeB);
+        viderBufferc();
+    }
+    
     srand(time(NULL));
     
-    FILE * fichier = fopen("/Users/Toussaint/Documents/Cours/LC4/test.txt", "w");
     int victoire = 0;
     int t = 0;
     int a=0;
     int b = 0;
     
-    for (t=0; t<200; t++) {
+    for (t=0; t<2000; t++) {
         
         victoire = 0;
         initMap();
@@ -41,7 +62,7 @@ int partiH()
                 coup * coupPossible = pere;
                 int n = 0;
                 int i = 0;
-                int max = calculHeuristiqueCoupsMultiples(pere, grille,'A',1);
+                int max = calculHeuristiqueCoups(pere, grille,'A',typeA);
                 
                 coupPossible = pere;
                 coup *coupHeuri = calloc(1,sizeof(coup));
@@ -73,10 +94,11 @@ int partiH()
                 
                 //printf("\n%s\n",coupPossible->proto);
                 if(action(grille, coupPossible->proto, pere,1)==1){
-                    printf("efef");
+                    //printf("efef");
                     a++;
                     victoire = 1;
                     break;
+                    //printf("a");
                 }
                 
                 freeCoup(pere,1);
@@ -93,7 +115,7 @@ int partiH()
                 coup * coupPossible = pere;
                 int n = 0;
                 int i = 0;
-                int max = calculHeuristiqueCoups(pere, grille,'B');
+                int max = calculHeuristiqueCoups(pere, grille,'B',typeB);
                 coupPossible = pere;
                 coup *coupHeuri = calloc(1,sizeof(coup));
                 coupHeuri->proto = NULL;
@@ -120,7 +142,7 @@ int partiH()
                 
                 //printf("\n%s\n",coupPossible->proto);
                 if(action(grille, coupPossible->proto, pere,1)==1){
-                    printf("efef");
+                    //printf("b");
                     b++;
                     victoire = 1;
                     break;
@@ -133,17 +155,16 @@ int partiH()
             }
             
         }
-        printf("%d",t);
+        //printf("%d",t);
         freeGrille(grille);
         freeMap();
         
     }
-    fprintf(fichier,"a=%d,b=%d",a,b);
-    fclose(fichier);
+    printf("a=%d,b=%d\n",a,b);
     return 0;
 }
 
-int jouerCoupIA(pion ** grille, char joueur,int  difficulter,int testIA){
+int jouerCoupIA(pion ** grille, char joueur,int  difficulter,int testIA, int ad,int type){
     coup * pere;
     pere = calloc(1,sizeof(coup));
     pere->proto = NULL;
@@ -153,8 +174,8 @@ int jouerCoupIA(pion ** grille, char joueur,int  difficulter,int testIA){
     int n = 0;
     int i = 0;
     int max;
-    if(difficulter == 0)max = calculHeuristiqueCoups(pere, grille,joueur);
-    else max = calculHeuristiqueCoupsMultiples(pere, grille,joueur,difficulter);
+    if(difficulter == 0)max = calculHeuristiqueCoups(pere, grille,joueur,type);
+    else max = calculHeuristiqueCoupsMultiples(pere, grille,joueur,difficulter,type);
     coupPossible = pere;
     coup *coupHeuri = calloc(1,sizeof(coup));
     coupHeuri->proto = NULL;
@@ -178,7 +199,7 @@ int jouerCoupIA(pion ** grille, char joueur,int  difficulter,int testIA){
     for (i=0; i<choix; i++) {
         coupPossible = coupPossible->coupSuivant;
     }
-    //setAdvice(coupPossible->proto);
+    if(ad)setAdvice(coupPossible->proto);
     if(!testIA)printf("\n%s\n",coupPossible->proto);
     if(action(grille, coupPossible->proto, pere,1)==1)return 1;
     

@@ -17,7 +17,53 @@
 #define min(a, b)       ((a) < (b) ? (a) : (b))
 #define max(a, b)       ((a) < (b) ? (b) : (a))
 
-int heuristiques (pion** grille,coup* coup,char joueur){
+int heuristique_armee;
+int heuristique_percee;
+int heuristique_defense;
+
+void setNormal(){
+    heuristique_armee = 3;
+    heuristique_percee = 0.5;
+    heuristique_defense = 1;
+}
+
+void setRush(){
+    heuristique_armee = 3;
+    heuristique_percee = 2;
+    heuristique_defense = 0.5;
+}
+
+void setBlock(){
+    heuristique_armee = 3;
+    heuristique_percee = 0.25;
+    heuristique_defense = 2;
+}
+
+void setLoose(){
+    heuristique_armee = 1;
+    heuristique_percee = 1;
+    heuristique_defense = 1;
+}
+
+int heuristiques (pion** grille,coup* coup,char joueur,int type){
+    switch (type) {
+        case 0:
+            setNormal();
+            break;
+        case 1:
+            setRush();
+            break;
+        case 2:
+            setBlock();
+            break;
+        case 3:
+            setLoose();
+            break;
+        default:
+            setNormal();
+            break;
+    }
+    
     int maxY=0;
     int minY=7;
     int resultat = 0;
@@ -38,21 +84,21 @@ int heuristiques (pion** grille,coup* coup,char joueur){
         for (y=0; y<8; y++) {
             if(grilleCpy[x][y].joueur == 'A')maxY= max(maxY,y);
             else if(grilleCpy[x][y].joueur == 'B') minY=min(minY,y);
-            if(joueur == 'A')resultat += (grilleCpy[x][y].joueur == joueur ? grilleCpy[x][y].type : -grilleCpy[x][y].type)*HEURISTIQUE_ARMEE;
-            if(joueur == 'B')resultat += (grilleCpy[x][y].joueur == joueur ? grilleCpy[x][y].type : -grilleCpy[x][y].type)*HEURISTIQUE_ARMEE;
+            if(joueur == 'A')resultat += (grilleCpy[x][y].joueur == joueur ? grilleCpy[x][y].type : -grilleCpy[x][y].type)*heuristique_armee;
+            if(joueur == 'B')resultat += (grilleCpy[x][y].joueur == joueur ? grilleCpy[x][y].type : -grilleCpy[x][y].type)*heuristique_armee;
             
         }
     }
-    if(joueur == 'A')resultat+=maxY*HEURISTIQUE_TEST;
-    if(joueur == 'B')resultat+=(7-minY)*HEURISTIQUE_PERCEE;
-    if(joueur == 'A')resultat-=(7-minY)*HEURISTIQUE_DEFENSE;
-    if(joueur == 'B')resultat-=(maxY)*HEURISTIQUE_DEFENSE;
+    if(joueur == 'A')resultat+=maxY*heuristique_percee;
+    if(joueur == 'B')resultat+=(7-minY)*heuristique_percee;
+    if(joueur == 'A')resultat-=(7-minY)*heuristique_defense;
+    if(joueur == 'B')resultat-=(maxY)*heuristique_defense;
     
     freeGrille(grilleCpy);
     return resultat;
 }
 
-int heuristiquesMultiple (pion** grille,coup* coup,char joueur,int profondeur){
+int heuristiquesMultiple (pion** grille,coup* coup,char joueur,int profondeur,int type){
     profondeur --;
     pion** grilleCpy = copieGrille(grille);
     if (coup->proto == NULL) {
@@ -70,7 +116,7 @@ int heuristiquesMultiple (pion** grille,coup* coup,char joueur,int profondeur){
     if(joueurTemp == 'A')joueurTemp = 'B';
     else joueurTemp = 'A';
     
-    if(jouerCoupIA(grilleCpy, joueurTemp,0,1)){
+    if(jouerCoupIA(grilleCpy, joueurTemp,0,1,0,0)){
         freeGrille(grilleCpy);
         return -9998;
     }
@@ -84,29 +130,29 @@ int heuristiquesMultiple (pion** grille,coup* coup,char joueur,int profondeur){
     pere->coupSuivant = NULL;
     pere = coupsPossibles(grilleCpy, joueurTemp,pere);
     int max = -9999;
-    if(profondeur>0)max = calculHeuristiqueCoupsMultiples(pere, grilleCpy,joueurTemp,profondeur);
-    else max = calculHeuristiqueCoups(pere, grilleCpy,joueurTemp);
+    if(profondeur>0)max = calculHeuristiqueCoupsMultiples(pere, grilleCpy,joueurTemp,profondeur,type);
+    else max = calculHeuristiqueCoups(pere, grilleCpy,joueurTemp,type);
     freeCoup(pere,1);
     freeGrille(grilleCpy);
     return max;
 }
 
-int calculHeuristiqueCoups(coup * pere, pion ** grille, char joueur){
+int calculHeuristiqueCoups(coup * pere, pion ** grille, char joueur,int type){
     int max = -1000000;
     coup * coupPossible = pere;
     while (coupPossible != NULL) {
-        coupPossible->heuristique = heuristiques(grille, coupPossible, joueur);
+        coupPossible->heuristique = heuristiques(grille, coupPossible, joueur,type);
         if(coupPossible->heuristique > max) max = coupPossible->heuristique;
         //printf("%s|%d\n",coupPossible->proto,coupPossible->heuristique);
         coupPossible = coupPossible->coupSuivant;
     }
     return max;
 }
-int calculHeuristiqueCoupsMultiples(coup * pere, pion ** grille, char joueur,int prodondeur){
+int calculHeuristiqueCoupsMultiples(coup * pere, pion ** grille, char joueur,int prodondeur,int type){
     int max = -1000000;
     coup * coupPossible = pere;
     while (coupPossible != NULL) {
-        coupPossible->heuristique = heuristiquesMultiple(grille, coupPossible, joueur,prodondeur);
+        coupPossible->heuristique = heuristiquesMultiple(grille, coupPossible, joueur,prodondeur,type);
         if(coupPossible->heuristique > max) max = coupPossible->heuristique;
         //printf("%s|%d\n",coupPossible->proto,coupPossible->heuristique);
         coupPossible = coupPossible->coupSuivant;

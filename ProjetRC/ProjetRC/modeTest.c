@@ -34,13 +34,18 @@ void modeTest(char * name){
         printf("%s\n",coup);
         if(action(grille,coup,pere,1)==-1){
             printf("mauvais coup : %s\n" ,coup);
+            free(coup);
+            freeGrille(grille);
+            freeCoup(pere, 1);
             exit(1);
         }
         if(joueur == 'A')joueur = 'B';
         else joueur = 'A';
-        
+        freeCoup(pere, 1);
     }while (fgets(coup, 13, fichier) != NULL);
+    freeMap();
     updateMap(grille);
     affiche();
-    
+    free(coup);
+    freeGrille(grille);
 }

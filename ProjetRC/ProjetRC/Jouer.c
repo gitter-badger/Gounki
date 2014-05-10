@@ -165,12 +165,15 @@ void interaction(char * coup , pion ** grille , char* joueur , int mode, struct 
     save(grille, *joueur, mode);
   }
   else if(!strcmp(coup, "exit")){
+    freeCoup(pere, 1);
     freeGrille(grille);
     free(advice);
+    free(coup);
+    freeMap();
     exit(1);
   }
   else if(!strcmp(coup, "help")){
-    printf("Pour faire un déplacment : c2-d3\nPour faire un déploiement simple : c2+b2 pour les carrés\nPour faire un déploiement simple : c2*b3 pour les rond\nPour les deploiement composées c2*b3-b4 pour ce commencé par rond\nPour les deploiement composées c2+c3-b4 pour ce commencé par rond\nTaper help pour afficher ce menu\nTaper save pour sauvegarder\nTaper exit pour quitter le jeu\nTaper advice pour un conseil\nTaper cancel pour annuler le dernier coup jouer\n Taper redo pour refaire le coup annuler\n");
+    printf("Pour faire un déplacment : c2-d3\nPour faire un déploiement simple : c2+b2 pour les carrés\nPour faire un déploiement simple : c2*b3 pour les rond\nPour les deploiement composées c2*b3-b4 pour ce commencé par rond\nPour les deploiement composées c2+c3-b4 pour ce commencé par rond\nTaper help pour afficher ce menu\nTaper save pour sauvegarder\nTaper exit pour quitter le jeu\nTaper advice pour un conseil\n");
   }
   else if(!strcmp(coup, "advice")){
     int difficulter = -1;
@@ -179,8 +182,14 @@ void interaction(char * coup , pion ** grille , char* joueur , int mode, struct 
       scanf("%d", &difficulter);
       viderBuffer();
     }
+      int type = -1;
+      printf("0 pour l'IA standa\n1 pour l'IA aggresive\n2 pour l'IA defence\n3 pour l'IA bizzare\n");
+      while (difficulter<0||difficulter>4) {
+          scanf("%d", &type);
+          viderBuffer();
+      }
     pion ** grilleCpy = copieGrille(grille);
-    jouerCoupIA(grilleCpy, *joueur, difficulter, 1);
+    jouerCoupIA(grilleCpy, *joueur, difficulter, 1,1,type);
     freeGrille(grilleCpy);
     printf("advice : %s \n", advice);
   }
@@ -206,7 +215,6 @@ else *joueur = 'A';
 */
 else{
   coup = correrction(grille, coup, pere);
-  printf("%s\n",coup);
 }
 }
 
@@ -284,11 +292,17 @@ void jouer(){
   }
   else if (mode==2) {
     int difficulter = -1;
+    int type = -1;
     printf("Taper un nombre de 0 à 4 pour la difficulter \n");
     while (difficulter<0||difficulter>4) {
       scanf("%d", &difficulter);
       viderBuffer();
     }
+      printf("0 pour l'IA standa\n1 pour l'IA aggresive\n2 pour l'IA defence\n3 pour l'IA bizzare\n");
+      while (difficulter<0||difficulter>4) {
+          scanf("%d", &type);
+          viderBuffer();
+      }
     //Appelle fonction joueurs contre IA
     while (!victoire) {
       //while (fonction victoir.)
@@ -315,7 +329,7 @@ void jouer(){
 
         if(!victoire){
           printf("Coup IA\n");//appelle IA.
-          jouerCoupIA(grille, 'B',difficulter,0);
+          jouerCoupIA(grille, 'B',difficulter,0,0,type);
           joueur = 'A';
         }
       }
@@ -327,4 +341,8 @@ void jouer(){
     //Appelle fonction faire jouer 2 IA
     printf("IA VS IA\n");
   }
+    freeMap();
+    free(grille);
+    free(advice);
+    free(coup);
 }

@@ -13,7 +13,7 @@
 #include "partieHeuristique.h"
 
 //int heuristiques (pion** grille,coup* coup,char joueur);
-int calculHeuristiqueCoups(coup * pere, pion ** grille, char joueur);
-int calculHeuristiqueCoupsMultiples(coup * pere, pion ** grille, char joueur,int profondeur);
+int calculHeuristiqueCoups(coup * pere, pion ** grille, char joueur,int type);
+int calculHeuristiqueCoupsMultiples(coup * pere, pion ** grille, char joueur,int profondeur,int type);
 
 #endif

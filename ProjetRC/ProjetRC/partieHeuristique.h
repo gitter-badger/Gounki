@@ -19,7 +19,7 @@
 #include "Jouer.h"
 
 int partiH();
-int jouerCoupIA(pion ** grille, char joueur,int difficulter,int testIA);
+int jouerCoupIA(pion ** grille, char joueur,int difficulter,int testIA, int ad,int type);
 
 
 
