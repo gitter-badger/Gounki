@@ -17,6 +17,7 @@ void setVictoire(int v);
 void jouer();
 void setAdvice(char * ad);
 void setGrilleCancel(pion ** grille);
+char * correrction(pion ** grille,char * proto,coup* pere);
 
 
 #endif

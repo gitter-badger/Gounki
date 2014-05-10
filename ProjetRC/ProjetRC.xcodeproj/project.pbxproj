@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D34E2BBB18FD5BF500F25EF1 /* partieHeuristique.c in Sources */ = {isa = PBXBuildFile; fileRef = D34E2BBA18FD5BF500F25EF1 /* partieHeuristique.c */; };
+		D36BB771191EC6C0004B6C35 /* modeTest.c in Sources */ = {isa = PBXBuildFile; fileRef = D36BB770191EC6C0004B6C35 /* modeTest.c */; };
 		D3D97BFE191B90A000355D46 /* Jouer.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D97BFD191B90A000355D46 /* Jouer.c */; };
 		D3D97C02191BA6BC00355D46 /* persistance.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D97C01191BA6BC00355D46 /* persistance.c */; };
 		D3D9D67018F9F8E700C68278 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D9D66F18F9F8E700C68278 /* main.c */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		D34E2BBA18FD5BF500F25EF1 /* partieHeuristique.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = partieHeuristique.c; sourceTree = "<group>"; };
 		D34E2BBC18FD5C8900F25EF1 /* partieHeuristique.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = partieHeuristique.h; sourceTree = "<group>"; };
+		D36BB770191EC6C0004B6C35 /* modeTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modeTest.c; sourceTree = "<group>"; };
+		D36BB772191EC6C7004B6C35 /* modeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modeTest.h; sourceTree = "<group>"; };
 		D3D97BFD191B90A000355D46 /* Jouer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Jouer.c; sourceTree = "<group>"; };
 		D3D97BFF191B90FC00355D46 /* Jouer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jouer.h; sourceTree = "<group>"; };
 		D3D97C00191BA6B400355D46 /* persistance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = persistance.h; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				D3D9D66F18F9F8E700C68278 /* main.c */,
+				D36BB770191EC6C0004B6C35 /* modeTest.c */,
+				D36BB772191EC6C7004B6C35 /* modeTest.h */,
 				D34E2BBA18FD5BF500F25EF1 /* partieHeuristique.c */,
 				D34E2BBC18FD5C8900F25EF1 /* partieHeuristique.h */,
 				D3D9D67A18F9F8FB00C68278 /* grille.h */,
@@ -156,6 +161,7 @@
 				D3D9D68018FA4C0B00C68278 /* test.c in Sources */,
 				D3D97BFE191B90A000355D46 /* Jouer.c in Sources */,
 				D3D97C02191BA6BC00355D46 /* persistance.c in Sources */,
+				D36BB771191EC6C0004B6C35 /* modeTest.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

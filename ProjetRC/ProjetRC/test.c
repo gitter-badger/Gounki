@@ -69,8 +69,8 @@ void affiche(){
             if (i==0 || j==16){
                 printf ("\033[0m");
             }
-            if((map[i][j]=='B'&& j != 16)||(map[i][j+1]=='B'&& j != 15)|| (map[i][j-1]=='B'&& j != 17))BLUE();
-            if((map[i][j]=='A'&& j != 16)||(map[i][j+1]=='A'&& j != 15)|| (map[i][j-1]=='A'&& j != 17))RED();
+            if((map[i][j]=='B'&& j != 16)||(map[i][j-1]=='B'&& j != 17))BLUE();
+            if((map[i][j]=='A'&& j != 16)||(map[i][j-1]=='A'&& j != 17))RED();
             printf("%c ",map[i][j]);
         }
         c++;
