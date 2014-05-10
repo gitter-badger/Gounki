@@ -37,13 +37,16 @@ void save(pion ** grille, char joueur, int mode){
     strcat(name,"./Sauvegarde/");
     strcat(name,date);
     FILE * fichier = fopen((const char *)name, "w");
-    char * sauvegarde = calloc(130,sizeof(char));
-    sauvegarde[0]=inToChar(mode);
-    sauvegarde[1]=joueur;
+    char * sauvegarde = calloc(196,sizeof(char));
+    sauvegarde[0]='#';
+    sauvegarde[1]=inToChar(mode);
+    sauvegarde[2]=joueur;
+    sauvegarde[3]='\n';
     int i = 2;
     for (i=0; i<64; i++) {
-        sauvegarde[2*i+2]=inToChar(grille[i/8][i%8].type);
-        sauvegarde[2*i+3]=grille[i/8][i%8].joueur;
+        sauvegarde[3*i+4]=(grille[i%8][i/8].joueur == 'A')?'B':(grille[i%8][i/8].joueur == 'B')?'N':'V';
+        sauvegarde[3*i+5]=inToChar(grille[i%8][i/8].type);
+        sauvegarde[3*i+6]='\n';
     }
     fprintf(fichier,"%s",sauvegarde);
     //free(result);
@@ -80,8 +83,8 @@ char * charger(){
     
     FILE * fichier = fopen(name, "r");
     free(name);
-    char * chargement = calloc(130,sizeof(char));
-    fread( chargement , 130*sizeof(char) , 1 , fichier );
+    char * chargement = calloc(196,sizeof(char));
+    fread( chargement , 196*sizeof(char) , 1 , fichier );
     fclose(fichier);
     
     return chargement;

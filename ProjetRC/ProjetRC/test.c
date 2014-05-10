@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Pion.h"
-#define clear() printf("\033[2J\033[1;1H")
+#define clear()     printf("\033[H\033[2J")
 #define fond1()     printf("\033[40m"); //fond noir
-#define fond2()     printf("\033[47m"); //fond grise.
-#define BLUE        "\033[1;34m"
+#define fond2()     printf("\033[47m"); //fond gris.
+#define BLUE()       printf("\033[1;34m")
 #define BLACK       "\033[0;30m"
 
 char ** map;
@@ -43,6 +43,7 @@ void freeMap(){
 int joueurs(){
     return 0;
 }
+
 void affiche(){
     int i,j,a=0,b=0,c=1;//a,b,c me serve a alterner les cases noir et grise.
     for (j=16; j>=0; j--){
@@ -60,7 +61,6 @@ void affiche(){
                     a=0;
                 }
             }
-            
             if(i==0 && c==2){
                 b++;
                 c=0;
@@ -68,16 +68,13 @@ void affiche(){
             if (i==0 || j==16){
                 printf ("\033[0m");
             }
-            printf("%c",map[i][j]);
+            BLUE();
+            printf("%c ",map[i][j]);
         }
         c++;
-        printf ("\033[0m");
-        printf("\n");
+        printf ("\033[0m \n");
     }
-    printf ("\033[0m");
-    
 }
-
 void updateMap(pion ** grille){
     int x =0,y=0;
     for (x=0; x<8; x++) {

@@ -72,7 +72,7 @@ int partiH()
                 
                 
                 //printf("\n%s\n",coupPossible->proto);
-                if(action(grille, coupPossible->proto, pere)==1){
+                if(action(grille, coupPossible->proto, pere,1)==1){
                     printf("efef");
                     a++;
                     victoire = 1;
@@ -119,7 +119,7 @@ int partiH()
                 }
                 
                 //printf("\n%s\n",coupPossible->proto);
-                if(action(grille, coupPossible->proto, pere)==1){
+                if(action(grille, coupPossible->proto, pere,1)==1){
                     printf("efef");
                     b++;
                     victoire = 1;
@@ -178,9 +178,9 @@ int jouerCoupIA(pion ** grille, char joueur,int  difficulter,int testIA){
     for (i=0; i<choix; i++) {
         coupPossible = coupPossible->coupSuivant;
     }
-    
+    //setAdvice(coupPossible->proto);
     if(!testIA)printf("\n%s\n",coupPossible->proto);
-    if(action(grille, coupPossible->proto, pere)==1)return 1;
+    if(action(grille, coupPossible->proto, pere,1)==1)return 1;
     
     freeCoup(pere,1);
     freeCoup(coupHeuri,0);

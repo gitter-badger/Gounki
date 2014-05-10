@@ -15,7 +15,8 @@
 #define ProjetRC_Jouer_h
 void setVictoire(int v);
 void jouer();
-
+void setAdvice(char * ad);
+void setGrilleCancel(pion ** grille);
 
 
 #endif

@@ -12,10 +12,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Grille.h"
-#include "Pion.h"
+#include "pion.h"
 #include "test.h"
 #include <time.h>
 #include "heuristique.h"
+#include "Jouer.h"
 
 int partiH();
 int jouerCoupIA(pion ** grille, char joueur,int difficulter,int testIA);

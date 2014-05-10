@@ -11,7 +11,6 @@
 		D3D97BFE191B90A000355D46 /* Jouer.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D97BFD191B90A000355D46 /* Jouer.c */; };
 		D3D97C02191BA6BC00355D46 /* persistance.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D97C01191BA6BC00355D46 /* persistance.c */; };
 		D3D9D67018F9F8E700C68278 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D9D66F18F9F8E700C68278 /* main.c */; };
-		D3D9D67218F9F8E700C68278 /* ProjetRC.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3D9D67118F9F8E700C68278 /* ProjetRC.1 */; };
 		D3D9D67918F9F8F600C68278 /* grille.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D9D67818F9F8F600C68278 /* grille.c */; };
 		D3D9D67D18F9F90700C68278 /* pion.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D9D67C18F9F90700C68278 /* pion.c */; };
 		D3D9D68018FA4C0B00C68278 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = D3D9D67E18FA4C0B00C68278 /* test.c */; };
@@ -25,7 +24,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				D3D9D67218F9F8E700C68278 /* ProjetRC.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -40,7 +38,6 @@
 		D3D97C01191BA6BC00355D46 /* persistance.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = persistance.c; sourceTree = "<group>"; };
 		D3D9D66C18F9F8E700C68278 /* ProjetRC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjetRC; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D9D66F18F9F8E700C68278 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		D3D9D67118F9F8E700C68278 /* ProjetRC.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ProjetRC.1; sourceTree = "<group>"; };
 		D3D9D67818F9F8F600C68278 /* grille.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = grille.c; sourceTree = "<group>"; };
 		D3D9D67A18F9F8FB00C68278 /* grille.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = grille.h; sourceTree = "<group>"; };
 		D3D9D67B18F9F90000C68278 /* pion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pion.h; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 				D3D9D67C18F9F90700C68278 /* pion.c */,
 				D3D9D67E18FA4C0B00C68278 /* test.c */,
 				D3D9D67F18FA4C0B00C68278 /* test.h */,
-				D3D9D67118F9F8E700C68278 /* ProjetRC.1 */,
 				D3D97BFD191B90A000355D46 /* Jouer.c */,
 				D3D97BFF191B90FC00355D46 /* Jouer.h */,
 				D3D97C00191BA6B400355D46 /* persistance.h */,

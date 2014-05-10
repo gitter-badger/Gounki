@@ -32,7 +32,7 @@ int heuristiques (pion** grille,coup* coup,char joueur){
         freeGrille(grilleCpy);
         return 9999;
     }
-    else if (coup->proto != NULL && coup->proto != 0 )  action(grilleCpy, coup->proto,coup);
+    else if (coup->proto != NULL && coup->proto != 0 )  action(grilleCpy, coup->proto,coup,0);
     int x =0,y=0;
     for (x=0; x<8; x++) {
         for (y=0; y<8; y++) {
@@ -63,7 +63,7 @@ int heuristiquesMultiple (pion** grille,coup* coup,char joueur,int profondeur){
         freeGrille(grilleCpy);
         return 9999;
     }
-    else if (coup->proto != NULL && coup->proto != 0 )  action(grilleCpy, coup->proto,coup);
+    else if (coup->proto != NULL && coup->proto != 0 )  action(grilleCpy, coup->proto,coup,0);
     
     
     char joueurTemp = joueur;
